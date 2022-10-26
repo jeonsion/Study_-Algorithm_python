@@ -1,8 +1,10 @@
+
 def DFS(graph, v, visited):
-    visited[v] = True
-    print(v, end = ' ')
-    for i in graph[v]:
-        if not visited[i]:
+    #첫번째 노드(1) 방문
+    visited[v] = True   #방문 시, True 할당
+    print(v, end = ' ')    #방문후 출력
+    for i in graph[v]:      #이웃 노드를 순차적으로 확인하는 for문
+        if not visited[i]:  
             DFS(graph, i, visited)
             
 
